@@ -14,17 +14,29 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html{
+    width:100%;
+}
+body{
+    width:100%;
+}
 main{
     margin: 10px auto;
-    width: 1000px;
+    width: 90%;
+    height:95%;
     background-color: bisque;
+}
+div{
+    width:100%;
+}
+h1, h4, p{
+    width: 80%;
+}
+h1, h4, p, div{
+    margin: 10px auto;/*中央寄せ*/
 }
 h1, h4 {
     text-align: center;
-}
-p,div{
-    margin: 10px auto;/*中央寄せ*/
-    width: 700px;
 }
 table{
     background-color: white;
@@ -40,6 +52,12 @@ td > input {
 .flexbox{
     display:flex;
     justify-content: center;
+}
+.flexbox-iphone{
+    display: flex;
+    justify-content: center;
+    width:90%;
+
 }
 .flexCenter{
     align-items:center;
@@ -64,12 +82,13 @@ td > input {
     }
     .flexbox-iphone{
         display: flex;
-        justify-content: center;
-        width:90%;
-
     }
+    .tableBox{
+        width:90%;
+    }
+
     #result{
         margin: 10px auto;/*中央寄せ*/
-        width: 700px;
+        width: 100%;
     }
 }
