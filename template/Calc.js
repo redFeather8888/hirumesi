@@ -170,6 +170,7 @@ function showResult(){//結果を表示する
         let tr = document.createElement("tr");
         let td1 = document.createElement("td");
         td1.innerText = num;
+        td1.style.textAlign="center"
         let td2 = document.createElement("td");
         td2.innerText = data;
         tr.appendChild(td1);

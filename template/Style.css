@@ -30,7 +30,7 @@ div{
     width:100%;
 }
 h1, h4, p{
-    width: 80%;
+    width: 75%;
 }
 h1, h4, p, div{
     margin: 10px auto;/*中央寄せ*/
@@ -91,4 +91,7 @@ td > input {
         margin: 10px auto;/*中央寄せ*/
         width: 100%;
     }
+    h1, h4, p{
+    width: 80%;
+}
 }
