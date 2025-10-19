@@ -23,7 +23,7 @@ h1, h4 {
     text-align: center;
 }
 p,div{
-    margin: 10px auto;
+    margin: 10px auto;/*中央寄せ*/
     width: 700px;
 }
 table{
@@ -57,4 +57,19 @@ td > input {
 }
 .styled-button:hover {
     background-color: #45a049; /* ホバー時の背景色 */
+}
+@media screen and (max-width:640px){
+    .flexTop{
+        display: block;
+    }
+    .flexbox-iphone{
+        display: flex;
+        justify-content: center;
+        width:90%;
+
+    }
+    #result{
+        margin: 10px auto;/*中央寄せ*/
+        width: 700px;
+    }
 }
