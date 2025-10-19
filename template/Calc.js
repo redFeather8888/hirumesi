@@ -71,7 +71,6 @@ function getInputData(){//入力データを確認して配列に入れる
         AscendingOrder(ListItemPrice);
         DeleteDuplicate(ListItemPrice);
         AscendingOrder(ListPurchased);
-        DeleteDuplicate(ListPurchased);
     }else{
         flag=false;
     }
