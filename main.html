@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Style.css">
+        <title>test</title>
+    </head>
+    <body>
+        <main>
+            <div>
+            <h1>上限ピッタリを狙う人の便利ツール</h1>
+            <h4>～使い方～</h4>
+            <p>①購入リストにすでに購入することが決定している商品の価格を入力してください。</p>
+            <p>②購入に使える金額の上限を入力してボタンを押すと、上限価格以内の組み合わせが表示されます。</p>
+            </div>
+
+            <div>
+            <h4>＊使用上の注意</h4>
+            <p>・入力する価格は税込み価格で入力してください。</p>
+            <p>・表示される結果は、ピッタリ価格の次に上限価格に近い組み合わせが黄色、その次に近いものは赤で表示されます。</p>
+            <p>・単品価格が最小の商品は２つ以上購入しないと仮定して計算されています。</p>
+            </div>
+
+            <div class="flexbox flexCenter">
+            <h5>上限価格</h5>
+            <input type="number" value="682" id="budget">
+            <button class="styled-button" onclick="OnButtonClick()">実行</button>
+            </div>
+
+            <div class="flexbox flexTop">
+            <table id="itemPrice">
+                <tr><th>単品価格</th></tr>
+                <tr><td><input type="number" value="44"></td></tr>
+                <tr><td><input type="number" value="77"></td></tr>
+                <tr><td><input type="number" value="99"></td></tr>
+                <tr><td><input type="number" value="121"></td></tr>
+                <tr><td><input type="number" value="132"></td></tr>
+                <tr><td><input type="number" value="154"></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+            </table>
+            <table id="purchasedPrice">
+                <tr><th>購入リスト</th></tr>
+                <tr><td><input type="number" value=""></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+                <tr><td><input type="number" value=""></td></tr>
+            </table>
+            <table id="result">
+                <tr><th>No</th><th>価格の組み合わせ</th></tr>
+            </table>
+            </div>
+        </main>
+        <script type="text/javascript" src="Calc.js"></script>
+    </body>
+</html>
