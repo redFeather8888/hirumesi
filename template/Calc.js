@@ -27,7 +27,7 @@ function main(){
         budget=document.getElementById("budget").value;//予算
         maxSum=budget-sumPurchased;//上限金額を計算する
         calcAllPattern(maxSum);
-        calcResult();
+        calcResult(maxSum);
         showResult();
     }else{
 
@@ -136,15 +136,22 @@ function calcAllPattern(maxSum){//全パターンを計算する
     return true;
 }
 
-function calcResult(){//条件に合うパターンを計算する
+function calcResult(maxSum){//条件に合うパターンを計算する
     DeleteDuplicate(ListAllPrice);//取りうる金額のパターンを調べる
     arr=ListAllPrice.slice();
     AscendingOrder(arr);
     DeleteDuplicate(arr);
     message=""
-    const sum1st=arr[arr.length-1];
-    const sum2nd=arr[arr.length-2];
-    const sum3rd=arr[arr.length-3];
+
+    if(arr[arr.length-1]==maxSum){//ピッタリ価格が存在する場合
+        sum1st=arr[arr.length-1];
+        sum2nd=arr[arr.length-2];
+        sum3rd=arr[arr.length-3];
+    }else{
+        sum1st=-1;//価格は自然数
+        sum2nd=arr[arr.length-1];
+        sum3rd=arr[arr.length-2];
+    }
 
     for(var i=0; i<ListAllPrice.length; i++){
         if(ListAllPrice[i]==sum1st){
