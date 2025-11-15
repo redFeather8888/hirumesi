@@ -96,6 +96,9 @@ function Dice(Type){
         ctx.fillStyle = "white";
         ctx.fillText(String(number), (canvasWidth-charSize)/2 + charSize * 0.25, canvasHeight/2);
     }
+    function Random(min, max){
+        return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
     function initDice(X, Y){drawDice(["1","2","3"], X, Y,true);};
     function spinDice(X, y, number){
         const finalNumber = (number - 1) % 6 + 1;//サイコロの目をランダムで決定
@@ -137,7 +140,7 @@ function Dice(Type){
                 throwCount--;
                 let centerPosX = basePosX;//X座標の基準位置
                 let centerPosY = basePosY;//Y座標の基準位置
-                const DiceNumber = 1//Rnd.Random(1,6);
+                const DiceNumber = Rnd.Random(1,6);
                 spinDice(centerPosX, centerPosY, DiceNumber);
                 return DiceNumber;
             }
