@@ -97,7 +97,7 @@ function Dice(Type){
         ctx.fillText(String(number), (canvasWidth-charSize)/2 + charSize * 0.25, canvasHeight/2);
     }
     function Random(min, max){
-        return Math.floor(Math.random() * (max + 1 - min)) + min;
+        return Math.round(Math.random() * (max + 1 - min)) + min;
     }
     function initDice(X, Y){drawDice(["1","2","3"], X, Y,true);};
     function spinDice(X, y, number){
