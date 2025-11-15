@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+canvas{
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;
+    background-color: black;
+}
+@media screen and (max-width:640px){
+    canvas{
+        width: 100%;
+        height: 90%;
+        margin: 0px 0px;
+    }
+}
