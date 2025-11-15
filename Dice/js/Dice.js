@@ -140,7 +140,7 @@ function Dice(Type){
                 throwCount--;
                 let centerPosX = basePosX;//X座標の基準位置
                 let centerPosY = basePosY;//Y座標の基準位置
-                const DiceNumber = Rnd.Random(1,6);
+                const DiceNumber = Random(1,6);
                 spinDice(centerPosX, centerPosY, DiceNumber);
                 return DiceNumber;
             }
