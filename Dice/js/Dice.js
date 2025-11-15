@@ -28,7 +28,7 @@ function Dice(Type){
     let dicePattern = [
         ["1","6","5"],["2","5","4"],["3","4","2"],["4","3","2"],["5","2","1"],["6","4","5"]
     ];
-    const charSize = 100;//表示する文字のサイズ
+    const charSize = 200;//表示する文字のサイズ
     let throwCount = 1;//サイコロを振れる回数
     let isUsed = false;//サイコロが使用中かどうか
     const squareSize = Math.min(canvasWidth, canvasHeight) * 0.1; // サイコロの一辺の長さ
@@ -94,7 +94,7 @@ function Dice(Type){
     function drawText(number){
         ctx.font = String(charSize) + "px serif";
         ctx.fillStyle = "white";
-        ctx.fillText(String(number), (canvasWidth-charSize)/2, canvasHeight/2);
+        ctx.fillText(String(number), (canvasWidth-charSize)/2 + charSize * 0.25, canvasHeight/2);
     }
     function initDice(X, Y){drawDice(["1","2","3"], X, Y,true);};
     function spinDice(X, y, number){
