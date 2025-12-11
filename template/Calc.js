@@ -1,8 +1,40 @@
-document.getElementById("button").addEventListener("click", () => {
-    OnButtonClick();
+document.addEventListener("DOMContentLoaded", () => {
+    init();
+    document.getElementById("button").addEventListener("click", () => {
+        OnButtonClick();
+    });
 });
 function OnButtonClick() {
     main()
+}
+function init(){
+    const TableRow = 8;
+    const DefaultItemPrice = ["44", "77", "99", "121", "132", "154"];
+    let ElmFrag = document.createDocumentFragment();
+    let ElmFrag2 = document.createDocumentFragment();
+    for(let i=0;i<TableRow;i++){
+        const ElmInput = document.createElement("input");
+        ElmInput.type = "number";
+        ElmInput.value = (i<DefaultItemPrice.length)?DefaultItemPrice[i]:"";
+        const ElmTd = document.createElement("td");
+        ElmTd.append(ElmInput);
+        const ElmTr = document.createElement("tr");
+        ElmTr.append(ElmTd);
+        ElmFrag.append(ElmTr);
+
+        const ElmInput2 = document.createElement("input");
+        ElmInput2.type = "number";
+        const ElmTd2 = document.createElement("td");
+        ElmTd2.append(ElmInput2);
+        const ElmTr2 = document.createElement("tr");
+        ElmTr2.append(ElmTd2);
+        ElmFrag2.append(ElmTr2);
+        
+        const itemTable=document.getElementById("itemPrice");
+        itemTable.append(ElmFrag);
+        const purchasedTable=document.getElementById("purchasedPrice");
+        purchasedTable.append(ElmFrag2);
+    }
 }
 function main(){
     //ListItemPriceとListItemIDはセットで扱う
